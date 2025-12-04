@@ -6,17 +6,17 @@
     <title>Career Hub – Documents</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: { light: '#fecaca', DEFAULT: '#ef4444', dark: '#b91c1c' },
-          },
-          boxShadow: { card: '0 10px 25px rgba(15,23,42,0.06)' },
-          borderRadius: { card: '1.5rem' },
-        },
-      },
-    };
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { light: '#fecaca', DEFAULT: '#ef4444', dark: '#b91c1c' },
+                    },
+                    boxShadow: { card: '0 10px 25px rgba(15,23,42,0.06)' },
+                    borderRadius: { card: '1.5rem' },
+                },
+            },
+        };
     </script>
 </head>
 <body class="bg-slate-50 text-slate-900">
@@ -44,27 +44,32 @@
         </aside>
 
         <!-- Main -->
-        <main class="flex-1 px-10 py-8">
+        <main class="flex-1 px-4 py-6 md:px-10 md:py-8">
             <header class="mb-8">
                 <h1 class="text-2xl font-semibold text-slate-900">Documents</h1>
-                <p class="text-sm text-slate-500">Create and customize your resume and cover letters for specific roles.</p>
+                <p class="text-sm text-slate-500">
+                    Create and customize your resume and cover letters for specific roles.
+                </p>
             </header>
 
             <!-- Customize for Role -->
-            <section class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-5 mb-8">
+            <section class="bg-white rounded-card shadow-card border border-slate-100 px-4 py-5 md:px-6 mb-8">
                 <h2 class="text-sm font-semibold text-slate-900 mb-5">Customize for Role</h2>
-                <div class="grid grid-cols-3 gap-4 mb-6 text-sm">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6 text-sm">
                     <div>
                         <label class="block text-xs text-slate-500 mb-1">Job Title</label>
-                        <input class="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-brand" placeholder="e.g., Senior Software Engineer" />
+                        <input class="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-brand"
+                               placeholder="e.g., Senior Software Engineer" />
                     </div>
                     <div>
                         <label class="block text-xs text-slate-500 mb-1">Company Name</label>
-                        <input class="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-brand" placeholder="e.g., Google" />
+                        <input class="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-brand"
+                               placeholder="e.g., Google" />
                     </div>
                     <div>
                         <label class="block text-xs text-slate-500 mb-1">Job Description (optional)</label>
-                        <input class="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-brand" placeholder="Paste the job description here..." />
+                        <input class="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-brand"
+                               placeholder="Paste the job description here..." />
                     </div>
                 </div>
                 <button class="px-4 py-2 rounded-full bg-slate-900 text-white text-sm font-semibold hover:bg-slate-800">
@@ -73,7 +78,7 @@
             </section>
 
             <!-- Editors -->
-            <section class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-5 mb-8">
+            <section class="bg-white rounded-card shadow-card border border-slate-100 px-4 py-5 md:px-6 mb-8">
                 <!-- Tabs -->
                 <div class="flex rounded-full bg-slate-100 p-1 text-xs font-medium mb-6">
                     <button class="flex-1 px-4 py-2 rounded-full bg-white text-slate-900 shadow-sm">Resume Editor</button>
@@ -92,7 +97,7 @@
                     Experienced software engineer with 3+ years developing web applications...
                 </div>
 
-                <div class="mt-4 flex justify-end gap-3 text-xs">
+                <div class="mt-4 flex flex-col gap-2 sm:flex-row sm:justify-end sm:gap-3 text-xs">
                     <button class="px-4 py-2 rounded-full border border-slate-200 text-slate-700 hover:bg-slate-100">Copy</button>
                     <button class="px-4 py-2 rounded-full border border-slate-200 text-slate-700 hover:bg-slate-100">Export</button>
                     <button class="px-4 py-2 rounded-full bg-brand text-white font-semibold hover:bg-brand-dark">Save Version</button>
@@ -100,7 +105,7 @@
             </section>
 
             <!-- Saved versions -->
-            <section class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-5">
+            <section class="bg-white rounded-card shadow-card border border-slate-100 px-4 py-5 md:px-6">
                 <h2 class="text-sm font-semibold text-slate-900 mb-4">Saved Versions</h2>
                 <div class="space-y-3 text-sm">
                     <div class="flex items-center justify-between px-4 py-3 rounded-xl border border-slate-100">
@@ -130,3 +135,4 @@
     </div>
 </body>
 </html>
+
