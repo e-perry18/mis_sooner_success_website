@@ -1,11 +1,213 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+﻿<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Career Hub – Personal Overview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: { light: '#fecaca', DEFAULT: '#ef4444', dark: '#b91c1c' } },
+          boxShadow: { card: '0 10px 25px rgba(15,23,42,0.06)' },
+          borderRadius: { card: '1.5rem' },
+        },
+      },
+    };
+    </script>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-900">
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white border-r border-slate-200 flex flex-col">
+            <div class="px-6 py-6 border-b border-slate-100">
+                <div class="font-semibold text-lg text-slate-900">Sooner Success</div>
+                <div class="text-sm text-slate-500">Your Career Hub</div>
+            </div>
+            <nav class="flex-1 px-2 py-4 space-y-1 text-sm">
+                <a href="index.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100">Dashboard</a>
+                <a href="documents.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100">Documents</a>
+                <a href="resources.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100">Resources</a>
+                <a href="personal-overview.html" class="flex items-center justify-between px-3 py-2 rounded-xl bg-slate-900 text-white font-medium">
+                    <span>Personal Overview</span>
+                    <span class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-brand text-white text-xs">•</span>
+                </a>
+                <a href="assessment-tests.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100">Assessment Tests</a>
+                <a href="applications.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100">Applications</a>
+            </nav>
+            <div class="px-6 py-5 border-t border-slate-100 text-xs text-slate-500">
+                Ready to land your dream job?
+            </div>
+        </aside>
 
+        <!-- Main -->
+        <main class="flex-1 px-10 py-8">
+            <header class="flex items-center justify-between mb-6">
+                <div>
+                    <h1 class="text-2xl font-semibold text-slate-900">Personal Overview</h1>
+                    <p class="text-sm text-slate-500">Manage your professional profile, strengths, and development areas.</p>
+                </div>
+                <button class="px-4 py-2 rounded-full border border-slate-200 text-sm text-slate-700 hover:bg-slate-100">
+                    Edit Profile
+                </button>
+            </header>
+
+            <section class="grid grid-cols-3 gap-6 mb-6">
+                <!-- Professional Profile -->
+                <div class="col-span-2 bg-white rounded-card shadow-card border border-slate-100 px-6 py-5">
+                    <h2 class="text-sm font-semibold text-slate-900 mb-4">Professional Profile</h2>
+                    <div class="mb-3">
+                        <div class="text-base font-semibold text-slate-900">John Doe</div>
+                        <div class="text-sm text-slate-500">Software Engineer</div>
+                    </div>
+                    <div class="mt-4 space-y-4 text-sm">
+                        <div>
+                            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Professional Summary</div>
+                            <p class="text-slate-700">
+                                Passionate software engineer with 3+ years of experience in full-stack development. Strong problem‑solving skills and a commitment to writing clean, efficient code.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Career Goals</div>
+                            <p class="text-slate-700">
+                                To become a senior software engineer at a leading tech company and eventually transition into a technical leadership role.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Overall Score -->
+                <div class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-5">
+                    <h2 class="text-sm font-semibold text-slate-900 mb-4">Overall Score</h2>
+                    <div class="text-3xl font-semibold text-slate-900 mb-1">78</div>
+                    <div class="text-xs text-slate-500 mb-4">Out of 100</div>
+                    <div class="w-full h-2 rounded-full bg-slate-200 overflow-hidden mb-2">
+                        <div class="h-full w-3/4 bg-slate-900 rounded-full"></div>
+                    </div>
+                    <div class="text-xs text-slate-500">Based on skills and personality assessment</div>
+                </div>
+            </section>
+
+            <!-- Middle row -->
+            <section class="grid grid-cols-3 gap-6 mb-6">
+                <!-- Strengths -->
+                <div class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-5">
+                    <h2 class="text-sm font-semibold text-slate-900 mb-4">Strengths</h2>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700">Problem Solving</span>
+                        <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700">Team Collaboration</span>
+                        <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700">Quick Learning</span>
+                        <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700">Communication</span>
+                        <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700">Technical Writing</span>
+                    </div>
+                </div>
+
+                <!-- Development Areas -->
+                <div class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-5">
+                    <h2 class="text-sm font-semibold text-slate-900 mb-4">Development Areas</h2>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700">Public Speaking</span>
+                        <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700">Time Management</span>
+                        <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700">Delegating Tasks</span>
+                    </div>
+                </div>
+
+                <!-- Personality Traits -->
+                <div class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-5">
+                    <h2 class="text-sm font-semibold text-slate-900 mb-4">Personality Traits</h2>
+                    <div class="space-y-3 text-xs">
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Analytical</span><span>85%</span></div>
+                            <div class="h-1.5 rounded-full bg-slate-200 overflow-hidden">
+                                <div class="h-full w-5/6 bg-slate-900"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Creative</span><span>72%</span></div>
+                            <div class="h-1.5 rounded-full bg-slate-200 overflow-hidden">
+                                <div class="h-full w-[72%] bg-slate-900"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Leadership</span><span>68%</span></div>
+                            <div class="h-1.5 rounded-full bg-slate-200 overflow-hidden">
+                                <div class="h-full w-[68%] bg-slate-900"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Adaptability</span><span>88%</span></div>
+                            <div class="h-1.5 rounded-full bg-slate-200 overflow-hidden">
+                                <div class="h-full w-[88%] bg-slate-900"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Communication</span><span>75%</span></div>
+                            <div class="h-1.5 rounded-full bg-slate-200 overflow-hidden">
+                                <div class="h-full w-[75%] bg-slate-900"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bottom row -->
+            <section class="grid grid-cols-3 gap-6">
+                <!-- Technical Skills -->
+                <div class="col-span-2 bg-white rounded-card shadow-card border border-slate-100 px-6 py-5">
+                    <h2 class="text-sm font-semibold text-slate-900 mb-4">Technical Skills</h2>
+                    <div class="space-y-4 text-xs">
+                        <div>
+                            <div class="flex justify-between mb-1"><span>JavaScript</span><span>90%</span></div>
+                            <div class="h-1.5 rounded-full bg-slate-200 overflow-hidden">
+                                <div class="h-full w-[90%] bg-slate-900"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>React</span><span>85%</span></div>
+                            <div class="h-1.5 rounded-full bg-slate-200 overflow-hidden">
+                                <div class="h-full w-[85%] bg-slate-900"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Node.js</span><span>80%</span></div>
+                            <div class="h-1.5 rounded-full bg-slate-200 overflow-hidden">
+                                <div class="h-full w-[80%] bg-slate-900"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Python</span><span>75%</span></div>
+                            <div class="h-1.5 rounded-full bg-slate-200 overflow-hidden">
+                                <div class="h-full w-[75%] bg-slate-900"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>SQL</span><span>70%</span></div>
+                            <div class="h-1.5 rounded-full bg-slate-200 overflow-hidden">
+                                <div class="h-full w-[70%] bg-slate-900"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>AWS</span><span>65%</span></div>
+                            <div class="h-1.5 rounded-full bg-slate-200 overflow-hidden">
+                                <div class="h-full w-[65%] bg-slate-900"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Achievements -->
+                <div class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-5">
+                    <h2 class="text-sm font-semibold text-slate-900 mb-4">Key Achievements</h2>
+                    <ul class="space-y-2 text-sm text-slate-700">
+                        <li>Led migration of legacy system serving 10K+ users</li>
+                        <li>Reduced application load time by 40%</li>
+                        <li>Mentored 3 junior developers</li>
+                        <li>Contributed to 5+ open source projects</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>

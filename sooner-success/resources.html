@@ -1,11 +1,174 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+﻿<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Career Hub – Resources</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: { light: '#fecaca', DEFAULT: '#ef4444', dark: '#b91c1c' } },
+          boxShadow: { card: '0 10px 25px rgba(15,23,42,0.06)' },
+          borderRadius: { card: '1.5rem' },
+        },
+      },
+    };
+    </script>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-900">
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white border-r border-slate-200 flex flex-col">
+            <div class="px-6 py-6 border-b border-slate-100">
+                <div class="font-semibold text-lg text-slate-900">Sooner Success</div>
+                <div class="text-sm text-slate-500">Your Career Hub</div>
+            </div>
+            <nav class="flex-1 px-2 py-4 space-y-1 text-sm">
+                <a href="index.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100">Dashboard</a>
+                <a href="documents.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100">Documents</a>
+                <a href="resources.html" class="flex items-center justify-between px-3 py-2 rounded-xl bg-slate-900 text-white font-medium">
+                    <span>Resources</span>
+                    <span class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-brand text-white text-xs">•</span>
+                </a>
+                <a href="personal-overview.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100">Personal Overview</a>
+                <a href="assessment-tests.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100">Assessment Tests</a>
+                <a href="applications.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100">Applications</a>
+            </nav>
+            <div class="px-6 py-5 border-t border-slate-100 text-xs text-slate-500">
+                Ready to land your dream job?
+            </div>
+        </aside>
 
+        <!-- Main -->
+        <main class="flex-1 px-10 py-8">
+            <header class="mb-6">
+                <h1 class="text-2xl font-semibold text-slate-900">Career Resources</h1>
+                <p class="text-sm text-slate-500">Curated resources to help you excel in interviews and advance your career.</p>
+            </header>
+
+            <!-- Tabs + search -->
+            <section class="mb-6">
+                <div class="w-full mb-4">
+                    <input class="w-full rounded-full border border-slate-200 px-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-brand"
+                           placeholder="Search resources..." />
+                </div>
+                <div class="flex rounded-full bg-slate-100 p-1 text-xs font-medium max-w-xl">
+                    <button class="flex-1 px-4 py-2 rounded-full bg-white text-slate-900 shadow-sm">Interviews</button>
+                    <button class="flex-1 px-4 py-2 rounded-full text-slate-500">Case Studies</button>
+                    <button class="flex-1 px-4 py-2 rounded-full text-slate-500">Skills Development</button>
+                    <button class="flex-1 px-4 py-2 rounded-full text-slate-500">Networking</button>
+                </div>
+            </section>
+
+            <!-- Resource cards -->
+            <section class="mb-8">
+                <h2 class="text-sm font-semibold text-slate-900 mb-4">Interview Preparation</h2>
+                <div class="grid grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <article class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-5 flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="px-3 py-1 rounded-full bg-slate-100 text-xs text-slate-800 font-medium">Guide</span>
+                                <div class="flex items-center gap-1 text-xs text-amber-500">
+                                    <span class="text-sm">★</span><span>4.8</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-semibold text-slate-900 mb-1">Technical Interview Mastery</h3>
+                                <p class="text-xs text-slate-500">Complete guide to acing technical interviews with coding challenges and system design questions.</p>
+                            </div>
+                            <div class="flex items-center gap-2 text-xs text-slate-500">
+                                <span>⏱</span><span>45 min</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2 text-[11px]">
+                                <span class="px-2 py-1 rounded-full bg-slate-100 text-slate-700">Technical</span>
+                                <span class="px-2 py-1 rounded-full bg-slate-100 text-slate-700">Coding</span>
+                                <span class="px-2 py-1 rounded-full bg-slate-100 text-slate-700">System Design</span>
+                            </div>
+                        </div>
+                        <button class="mt-4 w-full flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-slate-200 text-xs text-slate-800 hover:border-brand hover:bg-brand-light/40">
+                            <span>View Resource</span><span>↗</span>
+                        </button>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-5 flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="px-3 py-1 rounded-full bg-slate-100 text-xs text-slate-800 font-medium">Article</span>
+                                <div class="flex items-center gap-1 text-xs text-amber-500">
+                                    <span class="text-sm">★</span><span>4.6</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-semibold text-slate-900 mb-1">Behavioral Interview Questions</h3>
+                                <p class="text-xs text-slate-500">Master the STAR method and common behavioral questions asked by top companies.</p>
+                            </div>
+                            <div class="flex items-center gap-2 text-xs text-slate-500">
+                                <span>⏱</span><span>20 min</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2 text-[11px]">
+                                <span class="px-2 py-1 rounded-full bg-slate-100 text-slate-700">Behavioral</span>
+                                <span class="px-2 py-1 rounded-full bg-slate-100 text-slate-700">STAR Method</span>
+                                <span class="px-2 py-1 rounded-full bg-slate-100 text-slate-700">Communication</span>
+                            </div>
+                        </div>
+                        <button class="mt-4 w-full flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-slate-200 text-xs text-slate-800 hover:border-brand hover:bg-brand-light/40">
+                            <span>View Resource</span><span>↗</span>
+                        </button>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-5 flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="px-3 py-1 rounded-full bg-slate-100 text-xs text-slate-800 font-medium">Tool</span>
+                                <div class="flex items-center gap-1 text-xs text-amber-500">
+                                    <span class="text-sm">★</span><span>4.7</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-semibold text-slate-900 mb-1">Mock Interview Platform</h3>
+                                <p class="text-xs text-slate-500">Practice interviews with AI or real interviewers from top tech companies.</p>
+                            </div>
+                            <div class="flex items-center gap-2 text-xs text-slate-500">
+                                <span>⏱</span><span>Interactive</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2 text-[11px]">
+                                <span class="px-2 py-1 rounded-full bg-slate-100 text-slate-700">Practice</span>
+                                <span class="px-2 py-1 rounded-full bg-slate-100 text-slate-700">Mock Interview</span>
+                                <span class="px-2 py-1 rounded-full bg-slate-100 text-slate-700">AI</span>
+                            </div>
+                        </div>
+                        <button class="mt-4 w-full flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-slate-200 text-xs text-slate-800 hover:border-brand hover:bg-brand-light/40">
+                            <span>View Resource</span><span>↗</span>
+                        </button>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Stats footer -->
+            <section class="grid grid-cols-4 gap-8 text-center text-sm text-slate-600">
+                <div>
+                    <div class="text-lg font-semibold text-slate-900">12</div>
+                    <div class="text-xs text-slate-500">Total Resources</div>
+                </div>
+                <div>
+                    <div class="text-lg font-semibold text-slate-900">4</div>
+                    <div class="text-xs text-slate-500">Interview Guides</div>
+                </div>
+                <div>
+                    <div class="text-lg font-semibold text-slate-900">3</div>
+                    <div class="text-xs text-slate-500">Case Studies</div>
+                </div>
+                <div>
+                    <div class="text-lg font-semibold text-slate-900">4.6</div>
+                    <div class="text-xs text-slate-500">Avg Rating</div>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>

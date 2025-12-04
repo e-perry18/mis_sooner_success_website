@@ -1,11 +1,188 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+﻿<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Career Hub – Assessment Tests</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: { light: '#fecaca', DEFAULT: '#ef4444', dark: '#b91c1c' } },
+          boxShadow: { card: '0 10px 25px rgba(15,23,42,0.06)' },
+          borderRadius: { card: '1.5rem' },
+        },
+      },
+    };
+    </script>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-900">
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white border-r border-slate-200 flex flex-col">
+            <div class="px-6 py-6 border-b border-slate-100">
+                <div class="font-semibold text-lg text-slate-900">Sooner Success</div>
+                <div class="text-sm text-slate-500">Your Career Hub</div>
+            </div>
+            <nav class="flex-1 px-2 py-4 space-y-1 text-sm">
+                <a href="index.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100">Dashboard</a>
+                <a href="documents.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100">Documents</a>
+                <a href="resources.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100">Resources</a>
+                <a href="personal-overview.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100">Personal Overview</a>
+                <a href="assessment-tests.html" class="flex items-center justify-between px-3 py-2 rounded-xl bg-slate-900 text-white font-medium">
+                    <span>Assessment Tests</span>
+                    <span class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-brand text-white text-xs">•</span>
+                </a>
+                <a href="applications.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100">Applications</a>
+            </nav>
+            <div class="px-6 py-5 border-t border-slate-100 text-xs text-slate-500">
+                Ready to land your dream job?
+            </div>
+        </aside>
 
+        <!-- Main -->
+        <main class="flex-1 px-10 py-8">
+            <header class="mb-6">
+                <h1 class="text-2xl font-semibold text-slate-900">Assessment Tests</h1>
+                <p class="text-sm text-slate-500">Evaluate and improve your critical thinking, problem‑solving, and analytical skills.</p>
+            </header>
+
+            <!-- Top stats -->
+            <section class="grid grid-cols-3 gap-6 mb-6 text-sm">
+                <div class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-4">
+                    <div class="text-xs text-slate-500 mb-1">Tests Completed</div>
+                    <div class="text-2xl font-semibold text-slate-900">2</div>
+                </div>
+                <div class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-4">
+                    <div class="text-xs text-slate-500 mb-1">Average Score</div>
+                    <div class="text-2xl font-semibold text-slate-900">89%</div>
+                </div>
+                <div class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-4">
+                    <div class="text-xs text-slate-500 mb-1">Tests Remaining</div>
+                    <div class="text-2xl font-semibold text-slate-900">2</div>
+                </div>
+            </section>
+
+            <!-- Available assessments -->
+            <section class="mb-6">
+                <h2 class="text-sm font-semibold text-slate-900 mb-4">Available Assessments</h2>
+                <div class="grid grid-cols-2 gap-6 text-sm">
+                    <!-- Critical Thinking -->
+                    <article class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-5">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="text-slate-900 font-semibold">Critical Thinking</div>
+                            <div class="flex items-center gap-2 text-xs">
+                                <span class="px-2 py-0.5 rounded-full bg-slate-100 text-slate-700">Cognitive</span>
+                                <span class="px-2 py-0.5 rounded-full bg-amber-50 text-amber-700">Medium</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-500 mb-3">
+                            Evaluate your ability to analyze information, identify patterns, and make logical conclusions.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-slate-500 mb-4">
+                            <span>⏱ 30 min</span><span>3 questions</span>
+                            <span class="text-brand-dark font-semibold">85%</span>
+                        </div>
+                        <button class="w-full px-4 py-2 rounded-full border border-slate-200 text-xs text-slate-800 hover:bg-slate-100">
+                            Retake Assessment
+                        </button>
+                    </article>
+
+                    <!-- Problem Solving -->
+                    <article class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-5">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="text-slate-900 font-semibold">Problem Solving</div>
+                            <div class="flex items-center gap-2 text-xs">
+                                <span class="px-2 py-0.5 rounded-full bg-slate-100 text-slate-700">Analytical</span>
+                                <span class="px-2 py-0.5 rounded-full bg-brand-light text-brand-dark">Hard</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-500 mb-3">
+                            Test your ability to approach complex problems systematically and find effective solutions.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-slate-500 mb-4">
+                            <span>⏱ 45 min</span><span>2 questions</span>
+                        </div>
+                        <button class="w-full px-4 py-2 rounded-full bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800">
+                            Start Assessment
+                        </button>
+                    </article>
+
+                    <!-- Data Analysis -->
+                    <article class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-5">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="text-slate-900 font-semibold">Data Analysis</div>
+                            <div class="flex items-center gap-2 text-xs">
+                                <span class="px-2 py-0.5 rounded-full bg-slate-100 text-slate-700">Quantitative</span>
+                                <span class="px-2 py-0.5 rounded-full bg-amber-50 text-amber-700">Medium</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-500 mb-3">
+                            Assess your skills in interpreting data, identifying trends, and making data‑driven decisions.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-slate-500 mb-4">
+                            <span>⏱ 40 min</span><span>2 questions</span>
+                            <span class="text-emerald-600 font-semibold">92%</span>
+                        </div>
+                        <button class="w-full px-4 py-2 rounded-full border border-slate-200 text-xs text-slate-800 hover:bg-slate-100">
+                            Retake Assessment
+                        </button>
+                    </article>
+
+                    <!-- Logical Reasoning -->
+                    <article class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-5">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="text-slate-900 font-semibold">Logical Reasoning</div>
+                            <div class="flex items-center gap-2 text-xs">
+                                <span class="px-2 py-0.5 rounded-full bg-slate-100 text-slate-700">Logic</span>
+                                <span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700">Easy</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-500 mb-3">
+                            Evaluate your deductive and inductive reasoning abilities.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-slate-500 mb-4">
+                            <span>⏱ 25 min</span><span>1 question</span>
+                        </div>
+                        <button class="w-full px-4 py-2 rounded-full bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800">
+                            Start Assessment
+                        </button>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Performance history -->
+            <section class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-5">
+                <h2 class="text-sm font-semibold text-slate-900 mb-4">Performance History</h2>
+                <div class="space-y-3 text-sm">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <div class="text-slate-800">Critical Thinking</div>
+                            <div class="text-xs text-slate-500">2024-01-10</div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-40 h-1.5 rounded-full bg-slate-200 overflow-hidden">
+                                <div class="h-full w-[85%] bg-slate-900"></div>
+                            </div>
+                            <span class="text-amber-500 text-sm font-semibold">85%</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <div class="text-slate-800">Data Analysis</div>
+                            <div class="text-xs text-slate-500">2024-01-08</div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-40 h-1.5 rounded-full bg-slate-200 overflow-hidden">
+                                <div class="h-full w-[92%] bg-slate-900"></div>
+                            </div>
+                            <span class="text-emerald-600 text-sm font-semibold">92%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>

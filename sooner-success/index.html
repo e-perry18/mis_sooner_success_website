@@ -1,11 +1,238 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+﻿<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Career Hub – Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              light: '#fecaca',
+              DEFAULT: '#ef4444',
+              dark: '#b91c1c',
+            },
+          },
+          boxShadow: {
+            card: '0 10px 25px rgba(15,23,42,0.06)',
+          },
+          borderRadius: {
+            card: '1.5rem',
+          },
+        },
+      },
+    };
+    </script>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-900">
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white border-r border-slate-200 flex flex-col">
+            <div class="px-6 py-6 border-b border-slate-100">
+                <div class="font-semibold text-lg text-slate-900">Sooner Success</div>
+                <div class="text-sm text-slate-500">Your Career Hub</div>
+            </div>
 
+            <nav class="flex-1 px-2 py-4 space-y-1">
+                <a href="index.html" class="flex items-center justify-between px-3 py-2 rounded-xl bg-slate-900 text-white text-sm font-medium">
+                    <span>Dashboard</span>
+                    <span class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-brand text-white text-xs">•</span>
+                </a>
+                <a href="documents.html" class="block px-3 py-2 rounded-xl text-sm text-slate-700 hover:bg-slate-100">Documents</a>
+                <a href="resources.html" class="block px-3 py-2 rounded-xl text-sm text-slate-700 hover:bg-slate-100">Resources</a>
+                <a href="personal-overview.html" class="block px-3 py-2 rounded-xl text-sm text-slate-700 hover:bg-slate-100">Personal Overview</a>
+                <a href="assessment-tests.html" class="block px-3 py-2 rounded-xl text-sm text-slate-700 hover:bg-slate-100">Assessment Tests</a>
+                <a href="applications.html" class="block px-3 py-2 rounded-xl text-sm text-slate-700 hover:bg-slate-100">Applications</a>
+            </nav>
+
+            <div class="px-6 py-5 border-t border-slate-100 text-xs text-slate-500">
+                Ready to land your dream job?
+            </div>
+        </aside>
+
+        <!-- Main content -->
+        <main class="flex-1 px-10 py-8">
+            <header class="flex items-center justify-between mb-8">
+                <div>
+                    <h1 class="text-2xl font-semibold text-slate-900">Welcome back!</h1>
+                    <p class="text-sm text-slate-500">Here’s an overview of your career progress.</p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button class="px-4 py-2 rounded-full border border-slate-200 text-sm text-slate-700 hover:bg-slate-100">
+                        Feedback
+                    </button>
+                    <button class="h-9 w-9 rounded-full bg-brand text-white text-sm font-semibold flex items-center justify-center">
+                        JD
+                    </button>
+                </div>
+            </header>
+
+            <!-- Top stats cards -->
+            <section class="grid grid-cols-4 gap-6 mb-8">
+                <!-- Applications Sent -->
+                <div class="bg-white rounded-card shadow-card px-6 py-5 border border-slate-100">
+                    <div class="text-xs font-medium text-slate-500 mb-2">Applications Sent</div>
+                    <div class="text-2xl font-semibold mb-1">12</div>
+                    <div class="text-xs text-brand-dark">+3 this week</div>
+                </div>
+
+                <!-- Interview Success Rate -->
+                <div class="bg-white rounded-card shadow-card px-6 py-5 border border-slate-100">
+                    <div class="text-xs font-medium text-slate-500 mb-2">Interview Success Rate</div>
+                    <div class="text-2xl font-semibold mb-1">85%</div>
+                    <div class="text-xs text-brand-dark">+10% improvement</div>
+                </div>
+
+                <!-- Skill Assessment Score -->
+                <div class="bg-white rounded-card shadow-card px-6 py-5 border border-slate-100">
+                    <div class="text-xs font-medium text-slate-500 mb-2">Skill Assessment Score</div>
+                    <div class="text-2xl font-semibold mb-1">92/100</div>
+                    <div class="text-xs text-brand-dark">Top 15% percentile</div>
+                </div>
+
+                <!-- Profile Completeness -->
+                <div class="bg-white rounded-card shadow-card px-6 py-5 border border-slate-100">
+                    <div class="text-xs font-medium text-slate-500 mb-2">Profile Completeness</div>
+                    <div class="text-2xl font-semibold mb-1">78%</div>
+                    <div class="text-xs text-brand-dark">22% to go</div>
+                </div>
+            </section>
+
+            <!-- Middle row -->
+            <section class="grid grid-cols-3 gap-6 mb-8">
+                <!-- Profile Completion -->
+                <div class="col-span-2 bg-white rounded-card shadow-card border border-slate-100 px-6 py-5">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-sm font-semibold text-slate-900 flex items-center gap-2">
+                            <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand-light text-brand-dark text-xs">★</span>
+                            Profile Completion
+                        </h2>
+                        <span class="text-xs text-slate-500">78%</span>
+                    </div>
+
+                    <!-- Progress bar -->
+                    <div class="w-full h-2 rounded-full bg-slate-200 mb-6 overflow-hidden">
+                        <div class="h-full w-4/5 bg-slate-900 rounded-full"></div>
+                    </div>
+
+                    <!-- Checklist -->
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-center justify-between">
+                            <span class="text-slate-700">Resume uploaded</span>
+                            <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-medium">Complete</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-slate-700">Skills assessment</span>
+                            <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-medium">Complete</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-slate-700">Personal strengths</span>
+                            <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-medium">Incomplete</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-slate-700">Career goals</span>
+                            <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-medium">Incomplete</span>
+                        </div>
+                    </div>
+
+                    <button class="mt-6 w-full py-3 rounded-full bg-slate-900 text-white text-sm font-semibold hover:bg-slate-800">
+                        Complete Profile
+                    </button>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-5">
+                    <h2 class="text-sm font-semibold text-slate-900 mb-4">Quick Actions</h2>
+                    <div class="space-y-3 text-sm">
+                        <button class="w-full flex items-center justify-between px-4 py-3 rounded-xl border border-slate-200 hover:border-brand hover:bg-brand-light/40 text-slate-800">
+                            <span>Create New Resume Version</span>
+                            <span class="text-xs text-brand-dark">→</span>
+                        </button>
+                        <button class="w-full flex items-center justify-between px-4 py-3 rounded-xl border border-slate-200 hover:border-brand hover:bg-brand-light/40 text-slate-800">
+                            <span>Take Assessment Test</span>
+                            <span class="text-xs text-brand-dark">→</span>
+                        </button>
+                        <button class="w-full flex items-center justify-between px-4 py-3 rounded-xl border border-slate-200 hover:border-brand hover:bg-brand-light/40 text-slate-800">
+                            <span>View Job Market Trends</span>
+                            <span class="text-xs text-brand-dark">→</span>
+                        </button>
+                        <button class="w-full flex items-center justify-between px-4 py-3 rounded-xl border border-slate-200 hover:border-brand hover:bg-brand-light/40 text-slate-800">
+                            <span>Connect Applications</span>
+                            <span class="text-xs text-brand-dark">→</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bottom row -->
+            <section class="grid grid-cols-2 gap-6">
+                <!-- Recent Activity -->
+                <div class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-5">
+                    <h2 class="text-sm font-semibold text-slate-900 mb-4">Recent Activity</h2>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex flex-col gap-1">
+                            <div class="flex items-center gap-2">
+                                <span class="h-2 w-2 rounded-full bg-slate-900"></span>
+                                <span class="text-slate-800">Updated resume for Software Engineer position</span>
+                            </div>
+                            <span class="ml-4 text-xs text-slate-500">2 hours ago</span>
+                        </li>
+                        <li class="flex flex-col gap-1">
+                            <div class="flex items-center gap-2">
+                                <span class="h-2 w-2 rounded-full bg-slate-900"></span>
+                                <span class="text-slate-800">Completed Critical Thinking assessment</span>
+                            </div>
+                            <span class="ml-4 text-xs text-slate-500">1 day ago</span>
+                        </li>
+                        <li class="flex flex-col gap-1">
+                            <div class="flex items-center gap-2">
+                                <span class="h-2 w-2 rounded-full bg-slate-900"></span>
+                                <span class="text-slate-800">Applied to TechCorp Inc.</span>
+                            </div>
+                            <span class="ml-4 text-xs text-slate-500">2 days ago</span>
+                        </li>
+                        <li class="flex flex-col gap-1">
+                            <div class="flex items-center gap-2">
+                                <span class="h-2 w-2 rounded-full bg-slate-900"></span>
+                                <span class="text-slate-800">Viewed interview preparation guide</span>
+                            </div>
+                            <span class="ml-4 text-xs text-slate-500">3 days ago</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Upcoming Tasks -->
+                <div class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-5">
+                    <h2 class="text-sm font-semibold text-slate-900 mb-4">Upcoming Tasks</h2>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-center justify-between px-4 py-3 rounded-xl border border-slate-100">
+                            <div>
+                                <div class="text-slate-800">Prepare for TechCorp interview</div>
+                                <div class="text-xs text-slate-500">Tomorrow</div>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-brand text-white text-xs font-medium">high</span>
+                        </div>
+                        <div class="flex items-center justify-between px-4 py-3 rounded-xl border border-slate-100">
+                            <div>
+                                <div class="text-slate-800">Complete Data Analysis assessment</div>
+                                <div class="text-xs text-slate-500">In 3 days</div>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-slate-900 text-white text-xs font-medium">medium</span>
+                        </div>
+                        <div class="flex items-center justify-between px-4 py-3 rounded-xl border border-slate-100">
+                            <div>
+                                <div class="text-slate-800">Update LinkedIn profile</div>
+                                <div class="text-xs text-slate-500">This week</div>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-medium">low</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>

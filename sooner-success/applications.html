@@ -1,11 +1,256 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+﻿<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Career Hub – Applications</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: { light: '#fecaca', DEFAULT: '#ef4444', dark: '#b91c1c' } },
+          boxShadow: { card: '0 10px 25px rgba(15,23,42,0.06)' },
+          borderRadius: { card: '1.5rem' },
+        },
+      },
+    };
+    </script>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-900">
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white border-r border-slate-200 flex flex-col">
+            <div class="px-6 py-6 border-b border-slate-100">
+                <div class="font-semibold text-lg text-slate-900">Sooner Success</div>
+                <div class="text-sm text-slate-500">Your Career Hub</div>
+            </div>
+            <nav class="flex-1 px-2 py-4 space-y-1 text-sm">
+                <a href="index.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100">Dashboard</a>
+                <a href="documents.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100">Documents</a>
+                <a href="resources.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100">Resources</a>
+                <a href="personal-overview.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100">Personal Overview</a>
+                <a href="assessment-tests.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100">Assessment Tests</a>
+                <a href="applications.html" class="flex items-center justify-between px-3 py-2 rounded-xl bg-slate-900 text-white font-medium">
+                    <span>Applications</span>
+                    <span class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-brand text-white text-xs">•</span>
+                </a>
+            </nav>
+            <div class="px-6 py-5 border-t border-slate-100 text-xs text-slate-500">
+                Ready to land your dream job?
+            </div>
+        </aside>
 
+        <!-- Main -->
+        <main class="flex-1 px-10 py-8">
+            <header class="flex items-center justify-between mb-6">
+                <div>
+                    <h1 class="text-2xl font-semibold text-slate-900">Application Tracker</h1>
+                    <p class="text-sm text-slate-500">Track and manage your job applications.</p>
+                </div>
+                <button class="px-4 py-2 rounded-full bg-slate-900 text-white text-sm font-semibold hover:bg-slate-800">
+                    + Add Application
+                </button>
+            </header>
+
+            <!-- Top stats -->
+            <section class="grid grid-cols-5 gap-4 mb-6 text-sm">
+                <div class="bg-white rounded-card shadow-card border border-slate-100 px-5 py-4">
+                    <div class="text-xs text-slate-500 mb-1">Total Applications</div>
+                    <div class="text-xl font-semibold text-slate-900">4</div>
+                </div>
+                <div class="bg-white rounded-card shadow-card border border-slate-100 px-5 py-4">
+                    <div class="text-xs text-slate-500 mb-1">Applied</div>
+                    <div class="text-xl font-semibold text-slate-900">1</div>
+                </div>
+                <div class="bg-white rounded-card shadow-card border border-slate-100 px-5 py-4">
+                    <div class="text-xs text-slate-500 mb-1">Screening</div>
+                    <div class="text-xl font-semibold text-slate-900">1</div>
+                </div>
+                <div class="bg-white rounded-card shadow-card border border-slate-100 px-5 py-4">
+                    <div class="text-xs text-slate-500 mb-1">Interview</div>
+                    <div class="text-xl font-semibold text-slate-900">1</div>
+                </div>
+                <div class="bg-white rounded-card shadow-card border border-slate-100 px-5 py-4">
+                    <div class="text-xs text-slate-500 mb-1">Success Rate</div>
+                    <div class="text-xl font-semibold text-slate-900">25%</div>
+                </div>
+            </section>
+
+            <!-- Filters -->
+            <section class="flex items-center justify-between mb-6 text-sm">
+                <div class="flex-1 max-w-md">
+                    <input class="w-full rounded-full border border-slate-200 px-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-brand"
+                           placeholder="Search applications..." />
+                </div>
+                <div class="flex items-center gap-3 ml-4">
+                    <button class="px-3 py-2 rounded-full border border-slate-200 text-xs text-slate-700 hover:bg-slate-100 flex items-center gap-2">
+                        <span>Filter</span><span>⏷</span>
+                    </button>
+                    <button class="px-3 py-2 rounded-full border border-slate-200 text-xs text-slate-700 hover:bg-slate-100">
+                        All Status
+                    </button>
+                </div>
+            </section>
+
+            <!-- Application cards -->
+            <section class="grid grid-cols-2 gap-6 mb-8 text-sm">
+                <!-- Card 1 -->
+                <article class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-5">
+                    <div class="flex items-start justify-between mb-3">
+                        <div>
+                            <h2 class="text-sm font-semibold text-slate-900">Senior Software Engineer</h2>
+                            <div class="text-xs text-slate-500 flex items-center gap-2 mt-1">
+                                <span>TechCorp Inc.</span>
+                                <span>•</span>
+                                <span>San Francisco, CA</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-end gap-2 text-xs">
+                            <span class="px-2 py-0.5 rounded-full bg-violet-100 text-violet-700">Interview</span>
+                            <span class="px-2 py-0.5 rounded-full bg-blue-100 text-blue-700">LinkedIn</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-xs text-slate-500 mb-3">
+                        <span>Applied: 2024-01-15</span>
+                        <span>Salary: $120k – $150k</span>
+                    </div>
+                    <div class="mb-3 text-xs">
+                        <span class="font-semibold text-slate-700">Next Step:</span>
+                        <span class="ml-1">Technical Interview – 2024-01-25</span>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-4">
+                        Applied through referral from John. Tech stack matches my skills perfectly.
+                    </p>
+                    <div class="flex items-center justify-between text-xs">
+                        <div class="flex gap-2">
+                            <button class="px-3 py-1 rounded-full border border-slate-200 text-slate-700 hover:bg-slate-100">View Job</button>
+                            <button class="px-3 py-1 rounded-full border border-slate-200 text-slate-700 hover:bg-slate-100">Edit</button>
+                        </div>
+                        <button class="text-slate-400 hover:text-brand-dark">🗑</button>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-5">
+                    <div class="flex items-start justify-between mb-3">
+                        <div>
+                            <h2 class="text-sm font-semibold text-slate-900">Full Stack Developer</h2>
+                            <div class="text-xs text-slate-500 flex items-center gap-2 mt-1">
+                                <span>StartupXYZ</span>
+                                <span>•</span>
+                                <span>Remote</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-end gap-2 text-xs">
+                            <span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-700">Screening</span>
+                            <span class="px-2 py-0.5 rounded-full bg-blue-100 text-blue-700">Indeed</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-xs text-slate-500 mb-3">
+                        <span>Applied: 2024-01-12</span>
+                        <span>Salary: $90k – $120k</span>
+                    </div>
+                    <div class="mb-3 text-xs">
+                        <span class="font-semibold text-slate-700">Next Step:</span>
+                        <span class="ml-1">Phone Screening – 2024-01-22</span>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-4">
+                        Interesting startup in the fintech space. Great growth potential.
+                    </p>
+                    <div class="flex items-center justify-between text-xs">
+                        <div class="flex gap-2">
+                            <button class="px-3 py-1 rounded-full border border-slate-200 text-slate-700 hover:bg-slate-100">View Job</button>
+                            <button class="px-3 py-1 rounded-full border border-slate-200 text-slate-700 hover:bg-slate-100">Edit</button>
+                        </div>
+                        <button class="text-slate-400 hover:text-brand-dark">🗑</button>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-5">
+                    <div class="flex items-start justify-between mb-3">
+                        <div>
+                            <h2 class="text-sm font-semibold text-slate-900">Frontend Developer</h2>
+                            <div class="text-xs text-slate-500 flex items-center gap-2 mt-1">
+                                <span>BigTech Solutions</span>
+                                <span>•</span>
+                                <span>Seattle, WA</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-end gap-2 text-xs">
+                            <span class="px-2 py-0.5 rounded-full bg-blue-100 text-blue-700">Applied</span>
+                            <span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700">Handshake</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-xs text-slate-500 mb-3">
+                        <span>Applied: 2024-01-10</span>
+                        <span class="px-2 py-0.5 rounded-full bg-slate-100 text-slate-700">low priority</span>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-4">
+                        Large company with good benefits. Applied to multiple positions.
+                    </p>
+                    <div class="flex items-center justify-between text-xs">
+                        <div class="flex gap-2">
+                            <button class="px-3 py-1 rounded-full border border-slate-200 text-slate-700 hover:bg-slate-100">View Job</button>
+                            <button class="px-3 py-1 rounded-full border border-slate-200 text-slate-700 hover:bg-slate-100">Edit</button>
+                        </div>
+                        <button class="text-slate-400 hover:text-brand-dark">🗑</button>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-5">
+                    <div class="flex items-start justify-between mb-3">
+                        <div>
+                            <h2 class="text-sm font-semibold text-slate-900">Software Engineer</h2>
+                            <div class="text-xs text-slate-500 flex items-center gap-2 mt-1">
+                                <span>InnovateLab</span>
+                                <span>•</span>
+                                <span>Austin, TX</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-end gap-2 text-xs">
+                            <span class="px-2 py-0.5 rounded-full bg-rose-100 text-rose-700">Rejected</span>
+                            <span class="px-2 py-0.5 rounded-full bg-slate-200 text-slate-800">Direct</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-xs text-slate-500 mb-3">
+                        <span>Applied: 2024-01-08</span>
+                        <span class="px-2 py-0.5 rounded-full bg-slate-900 text-white">medium priority</span>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-4">
+                        Good interview experience but decided to go with another candidate.
+                    </p>
+                    <div class="flex items-center justify-between text-xs">
+                        <div class="flex gap-2">
+                            <button class="px-3 py-1 rounded-full border border-slate-200 text-slate-700 hover:bg-slate-100">View Job</button>
+                            <button class="px-3 py-1 rounded-full border border-slate-200 text-slate-700 hover:bg-slate-100">Edit</button>
+                        </div>
+                        <button class="text-slate-400 hover:text-brand-dark">🗑</button>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Connect accounts -->
+            <section class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-5">
+                <h2 class="text-sm font-semibold text-slate-900 mb-3">Connect Your Job Search Accounts</h2>
+                <p class="text-xs text-slate-500 mb-4">
+                    Connect LinkedIn, Indeed, and Handshake to automatically track your applications.
+                </p>
+                <div class="flex gap-4 text-xs">
+                    <button class="px-4 py-2 rounded-full border border-slate-200 text-slate-700 hover:bg-slate-100">
+                        LinkedIn (Coming Soon)
+                    </button>
+                    <button class="px-4 py-2 rounded-full border border-slate-200 text-slate-700 hover:bg-slate-100">
+                        Indeed (Coming Soon)
+                    </button>
+                    <button class="px-4 py-2 rounded-full border border-slate-200 text-slate-700 hover:bg-slate-100">
+                        Handshake (Coming Soon)
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>

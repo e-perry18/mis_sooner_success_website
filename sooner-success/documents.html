@@ -1,11 +1,132 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+﻿<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Career Hub – Documents</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { light: '#fecaca', DEFAULT: '#ef4444', dark: '#b91c1c' },
+          },
+          boxShadow: { card: '0 10px 25px rgba(15,23,42,0.06)' },
+          borderRadius: { card: '1.5rem' },
+        },
+      },
+    };
+    </script>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-900">
+    <div class="min-h-screen flex">
+        <!-- Sidebar (same as index, Documents active) -->
+        <aside class="w-64 bg-white border-r border-slate-200 flex flex-col">
+            <div class="px-6 py-6 border-b border-slate-100">
+                <div class="font-semibold text-lg text-slate-900">Sooner Success</div>
+                <div class="text-sm text-slate-500">Your Career Hub</div>
+            </div>
+            <nav class="flex-1 px-2 py-4 space-y-1 text-sm">
+                <a href="index.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100">Dashboard</a>
+                <a href="documents.html" class="flex items-center justify-between px-3 py-2 rounded-xl bg-slate-900 text-white font-medium">
+                    <span>Documents</span>
+                    <span class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-brand text-white text-xs">•</span>
+                </a>
+                <a href="resources.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100">Resources</a>
+                <a href="personal-overview.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100">Personal Overview</a>
+                <a href="assessment-tests.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100">Assessment Tests</a>
+                <a href="applications.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-100">Applications</a>
+            </nav>
+            <div class="px-6 py-5 border-t border-slate-100 text-xs text-slate-500">
+                Ready to land your dream job?
+            </div>
+        </aside>
 
+        <!-- Main -->
+        <main class="flex-1 px-10 py-8">
+            <header class="mb-8">
+                <h1 class="text-2xl font-semibold text-slate-900">Documents</h1>
+                <p class="text-sm text-slate-500">Create and customize your resume and cover letters for specific roles.</p>
+            </header>
+
+            <!-- Customize for Role -->
+            <section class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-5 mb-8">
+                <h2 class="text-sm font-semibold text-slate-900 mb-5">Customize for Role</h2>
+                <div class="grid grid-cols-3 gap-4 mb-6 text-sm">
+                    <div>
+                        <label class="block text-xs text-slate-500 mb-1">Job Title</label>
+                        <input class="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-brand" placeholder="e.g., Senior Software Engineer" />
+                    </div>
+                    <div>
+                        <label class="block text-xs text-slate-500 mb-1">Company Name</label>
+                        <input class="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-brand" placeholder="e.g., Google" />
+                    </div>
+                    <div>
+                        <label class="block text-xs text-slate-500 mb-1">Job Description (optional)</label>
+                        <input class="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-brand" placeholder="Paste the job description here..." />
+                    </div>
+                </div>
+                <button class="px-4 py-2 rounded-full bg-slate-900 text-white text-sm font-semibold hover:bg-slate-800">
+                    Customize Documents
+                </button>
+            </section>
+
+            <!-- Editors -->
+            <section class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-5 mb-8">
+                <!-- Tabs -->
+                <div class="flex rounded-full bg-slate-100 p-1 text-xs font-medium mb-6">
+                    <button class="flex-1 px-4 py-2 rounded-full bg-white text-slate-900 shadow-sm">Resume Editor</button>
+                    <button class="flex-1 px-4 py-2 rounded-full text-slate-500">Cover Letter Editor</button>
+                </div>
+
+                <!-- Resume content preview -->
+                <div class="border border-slate-100 rounded-2xl p-5 bg-slate-50 text-xs leading-relaxed font-mono text-slate-800 max-h-80 overflow-y-auto">
+                    John Doe<br />
+                    Software Engineer<br /><br />
+                    CONTACT INFORMATION<br />
+                    Email: john.doe@email.com<br />
+                    Phone: (555) 123-4567<br />
+                    LinkedIn: linkedin.com/in/johndoe<br /><br />
+                    PROFESSIONAL SUMMARY<br />
+                    Experienced software engineer with 3+ years developing web applications...
+                </div>
+
+                <div class="mt-4 flex justify-end gap-3 text-xs">
+                    <button class="px-4 py-2 rounded-full border border-slate-200 text-slate-700 hover:bg-slate-100">Copy</button>
+                    <button class="px-4 py-2 rounded-full border border-slate-200 text-slate-700 hover:bg-slate-100">Export</button>
+                    <button class="px-4 py-2 rounded-full bg-brand text-white font-semibold hover:bg-brand-dark">Save Version</button>
+                </div>
+            </section>
+
+            <!-- Saved versions -->
+            <section class="bg-white rounded-card shadow-card border border-slate-100 px-6 py-5">
+                <h2 class="text-sm font-semibold text-slate-900 mb-4">Saved Versions</h2>
+                <div class="space-y-3 text-sm">
+                    <div class="flex items-center justify-between px-4 py-3 rounded-xl border border-slate-100">
+                        <div>
+                            <div class="text-slate-800">Generic Resume</div>
+                            <div class="text-xs text-slate-500">2024-01-15</div>
+                        </div>
+                        <button class="px-3 py-1 rounded-full border border-slate-200 text-xs text-slate-700 hover:bg-slate-100">Open</button>
+                    </div>
+                    <div class="flex items-center justify-between px-4 py-3 rounded-xl border border-slate-100">
+                        <div>
+                            <div class="text-slate-800">TechCorp Application</div>
+                            <div class="text-xs text-slate-500">2024-01-10</div>
+                        </div>
+                        <button class="px-3 py-1 rounded-full border border-slate-200 text-xs text-slate-700 hover:bg-slate-100">Open</button>
+                    </div>
+                    <div class="flex items-center justify-between px-4 py-3 rounded-xl border border-slate-100">
+                        <div>
+                            <div class="text-slate-800">StartupXYZ Cover Letter</div>
+                            <div class="text-xs text-slate-500">2024-01-08</div>
+                        </div>
+                        <button class="px-3 py-1 rounded-full border border-slate-200 text-xs text-slate-700 hover:bg-slate-100">Open</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
